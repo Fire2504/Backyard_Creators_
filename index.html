@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<style>
+
+    
+.container{
+        width: 90vw;
+    }
+    .form-container {
+        position: absolute;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        background: linear-gradient(to left ,#2BD0D9, #FFC1A1);
+   
+        transition: left 0.5s;
+    }
+    
+    .form-container.open {
+        left: 0;
+        width: 90vw;
+    }
+    
+    .form {
+        padding: 20px;
+        display: none; /* Hide the form initially */
+    }
+    
+    .form.open {
+        display: block; /* Show the form when it has the 'open' class */
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    .center-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;  /* You can adjust this as needed */
+    }
+
+    .snap2{
+        background: linear-gradient(to left ,#2BD0D9, #FFC1A1);
+    }
+
+
+    .alert{
+        width: 100%;
+        background: linear-gradient(to bottom ,#2BD0D9, #FFC1A1);
+        border-radius: 5px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 900;
+        display: none;
+
+    }
+
+    /* ... Additional CSS styles ... */
+
+</style>
+
+<body>
+    <div class="scroller">
+        <section class="snap2" >
+            <div class="container-fluid" id="image_bac1" >
+                <div class="row">
+                    <div class="col" data-aos="fade-up">
+                        <p style="font-family: 'Gabarito', sans-serif; font-size: 18px; margin-top: 5%; margin-left: 5%;">
+                            <img src="BC Logo_2.png" alt="logo" height="30px" width="30px"> Backyard Creators
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div data-aos="fade-left" class="col-sm-8">
+                        <p class="cont" style="font-family: 'Roboto', sans-serif; font-weight: 10; font-size: 45px; margin-top: 16%; margin-left: 8%;">Non -Surgical Hearing Device</p>
+                        <p class="cont" style="font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 40px; margin-left: 8%; line-height: 40px;"><b>Empowering Ears, Enriching Lives</b></p>
+                        <button type="button" class="btn btn-primary" id="openButton" style="font-family: 'Merriweather', serif; margin-left: 12%; margin-top: 8%;background-color: white; color: black; border: none; border-radius: 25px;  padding-left: 20px; padding-right: 17px;"><b>Join For Hear</b></button>
+                    </div>
+                    <div data-aos="fade-right" class="col-sm-4" style="display: flex; justify-content: center; margin-top: 9%; ">
+                        <img src="BC Logo -bc.png" alt="Your Image" height="150px">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="snap2" >
+            <div class="container-fluid" id="image_bac2" style="padding-top: 20%;">
+                <div class="row align-items-center justify-content-center  "  >
+                 
+                    <div data-aos="fade-up"  class="col-lg-7 d-flex justify-content-center">
+                        <p class="cont my-lg-5 px-3 px-lg-0" id="conte" style="font-family: 'Roboto', sans-serif; font-weight: 200; font-size: 27px; animation: slide-up 1.5s ease-out;  margin-top: 25%; margin-left: 8.5%;  text-align: justify;">
+                            Welcome to Backyard Creators, founded by twin visionaries,
+                            Raman and Lakshmanan, during their college days. We're
+                            dedicated to delivering affordable healthcare solutions,
+                            starting with 'Impulse', an external ear-device. Designed to restore hearing for those with congenital hearing loss,
+                            our mission is to empower communities in need across India and neighboring&nbsp;regions.
+                        </p>
+                    </div>
+                
+                    
+                    <div   data-aos="fade-up" class="col-lg-5  align-items-center justify-content-center text-center ">
+                        <img src="bc_foun.png" alt="Your Image" class="img-fluid my-3" style="animation: slide-up 1.5s ease-out; max-height: 37svh;">
+                        <p style="font-family: 'Merriweather', serif; font-weight: 700;">Raman & Lakshmanan<br>Co-Founders of Backyard Creators</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <!-- ... Other sections ... -->
+
+        <section  class="snap2">
+            <div class="container-fluid" id="image_bac3" style="padding-top: 20%; ">
+                <div class="container text-center">
+                    <div class="row justify-content-center">
+                        <!-- First Column: Connect With Us -->
+                        <div data-aos="fade-up" class="col-sm-6 text-center">
+                            <p style="font-size: 2rem; font-family: 'Merriweather', serif; font-weight: 300;">Connect With Us</p>
+                        </div>
+                    
+                        <!-- Second Column: Address -->
+                        <div data-aos="fade-up" class="col-sm-3">
+                            <h2 style="font-family: 'Merriweather', serif; font-weight: 700;">Address</h2>
+                            <p style="font-family: 'Merriweather', serif;  ">Backyard Creators Private Limited, Rathinam Techzone, Eachanari, Madukkarai, Coimbatore, Tamil Nadu - 641021</p>
+                        </div>
+                    
+                        <!-- Third Column: Social Media -->
+                        <div data-aos="fade-up" class="col-sm-3">
+                            <h2 style="font-family: 'Merriweather', serif; font-weight: 700;">Social Media</h2>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://www.youtube.com/channel/UC3KG5NfjZx6yEAi1gLAOWaw" target="_blank">
+                                    <img src="ytube.png" alt="YouTube" height="30px" width="30px">
+                                </a>
+                                <a href="https://www.linkedin.com/company/backyardcreators" target="_blank">
+                                    <img src="in.png" alt="LinkedIn" height="30px" width="30px">
+                                </a>
+                                <a href="https://www.facebook.com/Backyard-Creators-103133368200125/" target="_blank">
+                                    <img src="facebook.png" alt="Facebook" height="30px" width="30px">
+                                </a>
+                                <a href="https://www.instagram.com/backyardcreators/" target="_blank">
+                                    <img src="insta.png" alt="Instagram" height="30px" width="30px">
+                                </a>
+                                <a href="https://twitter.com/BackyardOFFICIA?s=08" target="_blank">
+                                    <img src="twit.png" alt="Twitter" height="30px" width="30px">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <div class="copyright text-center py-3" style="font-size: 18px; margin-top: 200px;">
+                    &copy; 2023 Backyard Creators. All Rights Reserved.
+                </div>
+
+                
+    <div class="form-container" id="formContainer">
+        <form class="form" id="PreOrder" method="post" action="">
+             <span class="close-button" id="closeButton" >X</span>
+      
+            <div class="container-fluid">
+                <p style="font-family: 'Gabarito', sans-serif; font-size: 18px; ">Pre-Order List</p>  
+              </div>
+            <div class="row">
+          
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fn" class="form-control underline-input" required>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="ln" class="form-control underline-input" required>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-sm">
+                    
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control underline-input" required>
+                </div>
+    
+            </div>
+    
+    
+    
+    
+    
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" class="form-control underline-input" required>
+                    </div>
+                </div>
+         
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" class="form-control underline-input" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <div class="alert">Your message has been successfully received.</div>
+        
+    
+            <div class="col-sm">
+                    
+                <div class="form-group">
+                    <label for="trial">Are You Intrested For Trial:</label>
+                    <input type="text" id="trial" name="desc" class="form-control underline-input" required>
+                </div>
+    
+            </div>
+    
+            <div class="row">
+                <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="countryCode">Country Code:</label>
+                            <select id="countryCode" class="form-control" required>
+                                <option value="+86">+86 (China)</option>
+                                <option value="+91">+91 (India)</option>
+                                <option value="+1">+1 (USA)</option>
+                                <option value="+62">+62 (Indonesia)</option>
+                                <option value="+92">+92 (Pakistan)</option>
+                                <option value="+880">+880 (Bangladesh)</option>
+                                <option value="+234">+234 (Nigeria)</option>
+                                <option value="+7">+7 (Russia)</option>
+                                <option value="+55">+55 (Brazil)</option>
+                                <option value="+52">+52 (Mexico)</option>
+                                <option value="+84">+84 (Vietnam)</option>
+                                <option value="+251">+251 (Ethiopia)</option>
+                                <option value="+20">+20 (Egypt)</option>
+                                <option value="+98">+98 (Iran)</option>
+                                <option value="+81">+81 (Japan)</option>
+                                <option value="+63">+63 (Philippines)</option>
+                                <option value="+90">+90 (Turkey)</option>
+                                <option value="+95">+95 (Myanmar)</option>
+                                <option value="+82">+82 (South Korea)</option>
+                                <option value="+27">+27 (South Africa)</option>
+                                <option value="+39">+39 (Italy)</option>
+                                <option value="+44">+44 (UK)</option>
+                                <option value="+255">+255 (Tanzania)</option>
+                                <option value="+93">+93 (Afghanistan)</option>
+                                <option value="+54">+54 (Argentina)</option>
+                                <option value="+380">+380 (Ukraine)</option>
+                                <option value="+48">+48 (Poland)</option>
+                                <option value="+213">+213 (Algeria)</option>
+                                <option value="+40">+40 (Romania)</option>
+                                <option value="+31">+31 (Netherlands)</option>
+                                <option value="+256">+256 (Uganda)</option>
+                                <option value="+66">+66 (Thailand)</option>
+                                <option value="+57">+57 (Colombia)</option>
+                                <option value="+213">+213 (Algeria)</option>
+                                <option value="+60">+60 (Malaysia)</option>
+                                <option value="+212">+212 (Morocco)</option>
+                                <option value="+976">+976 (Mongolia)</option>
+                                <option value="+49">+49 (Germany)</option>
+                                <option value="+33">+33 (France)</option>
+                                <option value="+34">+34 (Spain)</option>
+                                <option value="+56">+56 (Chile)</option>
+                                <option value="+32">+32 (Belgium)</option>
+                                <option value="+94">+94 (Sri Lanka)</option>
+                                <option value="+249">+249 (Sudan)</option>
+                                <option value="+58">+58 (Venezuela)</option>
+                                <option value="+30">+30 (Greece)</option>
+                                <option value="+372">+372 (Estonia)</option>
+                                <option value="+375">+375 (Belarus)</option>
+                                <option value="+977">+977 (Nepal)</option>
+                            </select>
+                            
+                        </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="cont">Contact No:</label>
+                        <input type="number"  id="cont" name="contact" class="form-control underline-input"   required>
+                    </div>
+                </div>
+                
+            </div>
+                
+            
+            
+    
+    <input type="submit" value="Submit"   onclick="getFullNumber()">
+    
+        </form>
+    
+    </div>
+  
+        </section>
+        
+    </div>
+<!-- country code -->
+
+<script>
+    function getFullNumber() {
+        var countryCode = document.getElementById("countryCode").value;
+        var contactNo = document.getElementById("cont").value;
+        
+        var fullNumber = countryCode + contactNo;
+        console.log(fullNumber);
+        // You can further process the full number as needed
+    }
+    </script>
+
+
+
+
+
+<!--Form-->
+<script>
+    const openButton = document.getElementById('openButton');
+    const closeButton = document.getElementById('closeButton');
+    const formContainer = document.getElementById('formContainer');
+    const form = document.querySelector('.form');
+
+    openButton.addEventListener('click', () => {
+        form.classList.add('open'); // Show the form by adding the 'open' class
+        formContainer.classList.add('open');
+    });
+
+    closeButton.addEventListener('click', () => {
+        form.classList.remove('open'); // Hide the form by removing the 'open' class
+        formContainer.classList.remove('open');
+    });
+</script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="mail.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript content ...
+        // For example: smooth scrolling logic, image loading logic, etc.
+    </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+ </script>
+
+</body>
+
+</html>

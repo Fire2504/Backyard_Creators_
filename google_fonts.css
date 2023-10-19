@@ -1,0 +1,243 @@
+
+
+
+p.cont {
+    
+    font-family: 'AR One Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+
+    font-size: 18px;
+    padding: 10px;
+    */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+   background-image: url('nwl.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+.container {
+    display: flex;
+  /*  flex-wrap: wrap;
+   justify-content: center;
+    align-items: flex-start; */
+    height: 50vh;
+    animation: slide-up 1.5s ease-out;
+}
+
+.content {
+    flex: 1;
+    
+    padding: 10px;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+@font-face {
+font-family: 'TT Norms';
+src: url('path-to-fonts/tt-norms-regular.woff2') format('woff2'),
+     url('path-to-fonts/tt-norms-regular.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+/* Define additional @font-face rules for other font variants if needed */
+
+
+
+
+
+
+
+p.cont {
+
+    font-size: 18px;
+    padding: 10px;
+}
+
+button.center-button {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.tainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+ 
+    margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+    .image {
+        flex: 1;
+     
+    }
+
+    .tainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(50%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+    
+    
+    
+    .container{
+        width: 90vw;
+    }
+    .form-container {
+        position: absolute;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        background-color: #fff;
+        transition: left 0.5s;
+    }
+    
+    .form-container.open {
+        left: 0;
+        width: 90vw;
+    }
+    
+    .form {
+        padding: 20px;
+        display: none; /* Hide the form initially */
+    }
+    
+    .form.open {
+        display: block; /* Show the form when it has the 'open' class */
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+.image_bac1{
+background-image: url('nwl.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    padding-bottom: 20%;
+}
+.image_bac2{
+background-image: url('fun_bac_g.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-bottom: 40%;
+    padding-top: 20%;
+   
+}
+
+.image_bac3{
+background-image: url('nwl.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-top: 10%;
+
+}
+
+
+
+.center_body{
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  
+
+   
+}
+.co_foun{
+display: flex;
+flex-direction: column;
+justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.rightcenter{
+width: 60vw;
+
+margin-right: auto;
+}
+.co_foun{
+margin-right: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
